@@ -7,7 +7,8 @@ const ChacInfo = () => {
   return(
     <div className="chac-info">
       <img src={chacPic} alt="" />
-      <BarStatus text="pontos de vida" current={55} max={78} />
+      <BarStatus barColor = "#417841" text="pontos de vida" current={55} max={78} />
+      <BarStatus barColor = "#5e5ed8" text="pontos de sanidade" current={55} max={78} />
     </div>
   )
 }

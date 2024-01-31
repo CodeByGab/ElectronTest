@@ -22,19 +22,24 @@ const SkillsList = ({ FOR, AGI, INT, VIG, PRE }: Skills) => {
   return (
     <div className="listOfSkills">
       <div onClick={() => console.log(rollDice(FOR))} className="skillSquare">
-        {FOR}
+        <span className="skill-number">{FOR}</span>
+        <span className="skill-name">FOR</span>
       </div>
       <div onClick={() => console.log(rollDice(AGI))} className="skillSquare">
-        {AGI}
+        <span className="skill-number">{AGI}</span>
+        <span className="skill-name">AGI</span>
       </div>
       <div onClick={() => console.log(rollDice(INT))} className="skillSquare">
-        {INT}
+        <span className="skill-number">{INT}</span>
+        <span className="skill-name">INT</span>
       </div>
       <div onClick={() => console.log(rollDice(VIG))} className="skillSquare">
-        {VIG}
+        <span className="skill-number">{VIG}</span>
+        <span className="skill-name">VIG</span>
       </div>
       <div onClick={() => console.log(rollDice(PRE))} className="skillSquare">
-        {PRE}
+        <span className="skill-number">{PRE}</span>
+        <span className="skill-name">PRE</span>
       </div>
     </div>
   );
