@@ -1,7 +1,13 @@
+$dark-background: #242424;
+$dark-component: #303030;
+$default-margin: 20px;
+$default-padding: 10px;
+
 :root {
+  font-family: "Varela", sans-serif;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: $dark-background;
 }
 
 * {
