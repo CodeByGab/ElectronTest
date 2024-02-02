@@ -1,0 +1,63 @@
+@import '../../index.scss';
+$blue-button: #3498DB;
+$blue-button-hover: #57a7dd;
+$blue-button-active: #1a4d6e;
+$trans-button-font-hover: #0073c0;
+$trans-button-bg-hover: #9bbed6;
+$trans-button-bg-active: #365162;
+
+header {
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    svg {
+        cursor: pointer;
+        width: 3em;
+    }
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-block: 2rem;
+    justify-content: center;
+    border-top: 1px solid white;
+    button{
+        margin-inline: .6rem;
+        font-size: 1.2rem;
+        border-radius: 12px;
+        padding-inline: 1.2rem;
+        padding-block: .8rem;
+        cursor: pointer;
+        &.create-sheet {
+            background-color: $blue-button;
+            color: white;
+            border: none;
+            &:hover {
+                background-color: $blue-button-hover;
+            }
+            &:active {
+                background-color: $blue-button-active;
+                border: 1px solid white;
+            }
+        }
+        &.create-sheet-fast {
+            border: 1px solid $blue-button;
+            color: $blue-button;
+            background-color: transparent;
+            &:hover {
+                border-color: $trans-button-font-hover  ;
+                background-color: $trans-button-bg-hover;
+                color: $trans-button-font-hover;
+            }
+            &:active {
+                background-color: $trans-button-bg-active;
+                border: 1px solid white;
+            }
+        }
+    }
+}

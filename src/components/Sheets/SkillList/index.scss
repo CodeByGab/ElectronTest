@@ -1,0 +1,23 @@
+@import '../../index.scss';
+
+.listOfSkills {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $dark-component;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: $default-margin;
+    padding: $default-padding;
+    color: $text-dark-color;
+    .skillSquare {
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 10px;
+        margin-inline: 20px;
+        min-width: 60px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}

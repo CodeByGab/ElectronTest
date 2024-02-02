@@ -6,7 +6,6 @@ $default-padding: 10px;
 
 :root {
   font-family: "Varela", sans-serif;
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: $dark-background;
 }
@@ -15,6 +14,14 @@ $default-padding: 10px;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+.wrapper-menu {
+  padding-inline: 70px;
 }
 
 @media (prefers-color-scheme: light) {

@@ -1,0 +1,15 @@
+@import '../../index.scss';
+
+.chac-info {
+    background-color: $dark-component;
+    margin: $default-margin;
+    padding: $default-padding;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    img {
+        max-width: 150px;
+    }
+}
