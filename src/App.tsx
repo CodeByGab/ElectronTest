@@ -1,4 +1,3 @@
-import "./App.scss";
 import MenuPage from "./pages/MenuPage";
 import SheetPage from "./pages/SheetPage";
 import CreateSheetPage from "./pages/CreateSheetPage";
@@ -10,7 +9,7 @@ const router = createBrowserRouter([
     element: <MenuPage />
   },
   {
-    path: 'sheets/:id',
+    path: 'sheets',
     element: <SheetPage />
   },
   {

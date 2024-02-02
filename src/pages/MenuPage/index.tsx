@@ -1,12 +1,13 @@
 // import { Link } from 'react-router-dom';
 import "./index.scss";
+import MenuCard from "../../components/MenuCard";
 
 const MenuPage = () => {
   console.log("teste menu");
 
   return (
     <>
-      <header className="wrapper-menu">
+      <header className="wrapper-menu header-menu">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -28,10 +29,6 @@ const MenuPage = () => {
         </svg>
 
         <h1>Minhas fichas</h1>
-
-        {/* <Link to={'/createSheet'}>
-        teste
-      </Link> */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -47,6 +44,9 @@ const MenuPage = () => {
           />
         </svg>
       </header>
+
+      <MenuCard />
+
       <footer>
         <button className="create-sheet">Criar Ficha</button>
         <button className="create-sheet-fast">Criar Ficha Rápida</button>

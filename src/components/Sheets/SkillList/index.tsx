@@ -19,6 +19,7 @@ function rollDice(rolls: number): number[] {
 }
 
 const SkillsList = ({ FOR, AGI, INT, VIG, PRE }: Skills) => {
+  console.log('skill list')
   return (
     <div className="listOfSkills">
       <div onClick={() => console.log(rollDice(FOR))} className="skillSquare">

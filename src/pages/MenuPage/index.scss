@@ -6,7 +6,7 @@ $trans-button-font-hover: #0073c0;
 $trans-button-bg-hover: #9bbed6;
 $trans-button-bg-active: #365162;
 
-header {
+.header-menu {
     height: 4rem;
     display: flex;
     justify-content: space-between;
@@ -23,11 +23,13 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding-block: 2rem;
+    min-height: 8rem;
     justify-content: center;
+    background-color: $dark-background;
     border-top: 1px solid white;
     button{
         margin-inline: .6rem;
+        margin-block: 2rem;
         font-size: 1.2rem;
         border-radius: 12px;
         padding-inline: 1.2rem;

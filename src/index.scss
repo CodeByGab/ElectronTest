@@ -1,5 +1,5 @@
 $dark-background: #1E1E1E;
-$dark-component: #303030;
+$dark-component: #272727;
 $text-dark-color: #EEEEEE;
 $default-margin: 20px;
 $default-padding: 10px;
@@ -16,17 +16,14 @@ $default-padding: 10px;
   box-sizing: border-box;
 }
 
-html {
-  height: 100vh;
+html,body {
+  min-height: 100vh;
 }
 
 .wrapper-menu {
-  padding-inline: 70px;
+  padding-inline: 2.4rem;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+  
 }
