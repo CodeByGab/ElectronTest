@@ -2,6 +2,7 @@ import './index.scss'
 import { Link } from "react-router-dom";
 import ChacInfo from "../../components/Sheets/ChacInfo";
 import SkillsList from '../../components/Sheets/SkillList';
+import ExtraInfo from '../../components/Sheets/ExtraInfo';
 
 const SheetPage = () => {
   return (
@@ -40,11 +41,12 @@ const SheetPage = () => {
         </svg>
       </header>
       <main className='main-content'>
-        <div className="aside-bar">
+        <div className="left-side">
           <ChacInfo />
         </div>
-        <div className="main-content">
+        <div className="right-side">
           <SkillsList FOR={4} AGI={2} INT={2} VIG={1} PRE={10}/>
+          <ExtraInfo />
         </div>
       </main>
     </>

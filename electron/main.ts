@@ -36,7 +36,6 @@ function createWindow() {
     },
     height: desiredHeight,
     width: desiredWidth,
-    resizable: false,
   });
 
   // Test active push message to Renderer-process.

@@ -17,12 +17,12 @@ $border-radius: 14px;
         background-color: $dark-background;
         cursor: pointer;
         box-shadow:
-        0px 1.7px 2.2px rgba(0, 0, 0, 0.039),
-        0px 4.6px 5.3px rgba(0, 0, 0, 0.057),
-        0px 9.1px 10px rgba(0, 0, 0, 0.07),
-        0px 15.8px 17.9px rgba(0, 0, 0, 0.083),
-        0px 26.4px 33.4px rgba(0, 0, 0, 0.101),
-        0px 52px 80px rgba(0, 0, 0, 0.14)
+        0px 1.7px 2.2px rgba(63.75, 63.75, 63.75, 0.039),
+        0px 4.6px 5.3px rgba(63.75, 63.75, 63.75, 0.057),
+        0px 9.1px 10px rgba(63.75, 63.75, 63.75, 0.07),
+        0px 15.8px 17.9px rgba(63.75, 63.75, 63.75, 0.083),
+        0px 26.4px 33.4px rgba(63.75, 63.75, 63.75, 0.101),
+        0px 52px 80px rgba(63.75, 63.75, 63.75, 0.14)
         ;
         transition: transform 0.3s ease-in-out;
         &:hover {

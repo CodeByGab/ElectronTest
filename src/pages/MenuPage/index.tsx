@@ -1,6 +1,7 @@
 // import { Link } from 'react-router-dom';
 import "./index.scss";
 import MenuCard from "../../components/MenuCard";
+import { Link } from "react-router-dom";
 
 const MenuPage = () => {
   console.log("teste menu");
@@ -47,9 +48,10 @@ const MenuPage = () => {
 
       <MenuCard />
 
-      <footer>
-        <button className="create-sheet">Criar Ficha</button>
-        <button className="create-sheet-fast">Criar Ficha Rápida</button>
+      <footer className="footer-menu">
+        <Link to="/createSheet" className="link-create">
+          <button className="create-sheet">Criar Ficha</button>
+        </Link>
       </footer>
     </>
   );

@@ -1,0 +1,50 @@
+@import '../../../index.scss';
+
+.footer-create-sheet {
+    background-color: rgb(68, 63, 63);
+    .going-back {
+        margin-inline: .6rem;
+        margin-block: 2rem;
+        max-height: 3rem;
+        border-radius: 12px;
+        button {
+            font-size: 1.2rem;
+            border-radius: 12px;
+            padding-inline: 1.2rem;
+            padding-block: .8rem;
+            cursor: pointer;
+            border: none;
+            background-color: $button-bg-color;
+            color: $text-dark-color;
+            &:hover {
+                background-color: $button-bg-color-hover;
+            }
+            &:active {
+                background-color: $button-bg-color-active;
+            }
+        }
+    }
+    .create-sheet-fast {
+        margin-inline: .6rem;
+        margin-block: 2rem;
+        button {
+            font-size: 1.2rem;
+            border-radius: 12px;
+            padding-inline: 1.2rem;
+            padding-block: .8rem;
+            cursor: pointer;
+            border: 1px solid $blue-button;
+            color: $blue-button;
+            background-color: transparent;
+            &:hover {
+                border-color: $trans-button-font-hover  ;
+                background-color: $trans-button-bg-hover;
+                color: $trans-button-font-hover;
+            }
+            &:active {
+                background-color: $trans-button-bg-active;
+                border: 1px solid white;
+            }
+        }
+    }
+}
