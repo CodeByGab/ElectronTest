@@ -1,0 +1,61 @@
+@import '../../../index.scss';
+
+.footer-create-sheet {
+    padding-inline: $padding-menu;
+    justify-content: space-between;
+    .going-back {
+        display: flex;
+        align-items: center;
+        margin-block: 2rem;
+        max-height: 3rem;
+        min-width: 8rem;
+        font-size: 1rem;
+        border-radius: 12px;
+        padding-block: .8rem;
+        cursor: pointer;
+        border: none;
+        background-color: $button-bg-color;
+        color: $text-dark-color;
+        &:hover {
+            background-color: $button-bg-color-hover;
+        }
+        &:active {
+            background-color: $button-bg-color-active;
+        }
+        span {
+            padding-inline: 1rem;
+        }
+        svg {
+            width: 1.2em;
+            &.svg-left {
+                margin-left: .4rem;
+            }
+            &.svg-right {
+                margin-right: .4rem;
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .create-sheet-fast {
+        border-radius: 12px;
+        margin-block: 2rem;
+        button {
+            height: 3rem;
+            font-size: 1.2rem;
+            border-radius: 12px;
+            padding-inline: 1.2rem;
+            cursor: pointer;
+            border: 1px solid $button-bg-color-hover;
+            color: $text-dark-color;
+            background-color: transparent;
+            &:hover {
+                background-color: $button-bg-color;
+                color: $text-dark-color;
+            }
+            &:active {
+                background-color: $button-bg-color-active;
+                border: 1px solid white;
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@import '../../index.scss';
+
+.header-menu {
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    svg {
+        cursor: pointer;
+        width: 3em;
+    }
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $footer-hg;
+    justify-content: center;
+    background-color: $dark-background;
+    align-items: center;
+    &.footer-menu {
+        border-top: 1px solid white;
+    }
+    .link-create {
+        margin-block: 2rem;
+        max-height: 3rem;
+        border-radius: 12px;
+        button{
+            font-size: 1.2rem;
+            border-radius: 12px;
+            padding-inline: 1.2rem;
+            padding-block: .8rem;
+            cursor: pointer;
+            &.create-sheet {
+                background-color: $button-bg-color;
+                color: white;
+                border: none;
+                font-weight: normal;
+                &:hover {
+                    background-color: $button-bg-color-hover;
+                }
+                &:active {
+                    background-color: $button-bg-color-active;
+                }
+            }
+        }
+    }
+    
+}

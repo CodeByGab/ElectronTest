@@ -1,14 +1,30 @@
-$dark-background: #1E1E1E;
-$dark-component: #303030;
+$dark-background: #121212;
+$dark-component: #282828;
 $text-dark-color: #EEEEEE;
 $default-margin: 20px;
 $default-padding: 10px;
+$button-bg-color: #702c6c;
+$button-bg-color-hover: #882c84;
+$button-bg-color-active: #50244c;
+$padding-menu: 6rem;
+$footer-hg: 6rem;
 
 :root {
-  font-family: "Varela", sans-serif;
-  color-scheme: light dark;
+  font-family: "Inter", sans-serif;
   color: rgba(255, 255, 255, 0.87);
   background-color: $dark-background;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
 }
 
 * {
@@ -17,9 +33,14 @@ $default-padding: 10px;
   box-sizing: border-box;
 }
 
+html,body {
+  min-height: 100vh;
+}
+
+.wrapper-menu {
+  padding-inline: 2.4rem;
+}
+
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+  
 }

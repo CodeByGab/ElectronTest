@@ -1,0 +1,17 @@
+.header-sheets {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    svg {    
+        width: 2.4em;
+        cursor: pointer;
+        margin-inline: .2rem;
+        margin-block: .3rem
+    }
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+}

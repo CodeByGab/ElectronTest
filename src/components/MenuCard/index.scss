@@ -1,0 +1,80 @@
+@import '../../index.scss';
+$border-radius: 14px;
+
+.main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-height: calc(100vh - $footer-hg);
+    overflow-y: auto;
+    .card {
+        margin-block: .5rem;
+        display: flex;
+        flex-direction: row;
+        border: 1px solid white;
+        border-radius: $border-radius;
+        max-width: 16rem;
+        background-color: $dark-background;
+        cursor: pointer;
+        box-shadow:
+        0px 1.7px 2.2px rgba(63.75, 63.75, 63.75, 0.039),
+        0px 4.6px 5.3px rgba(63.75, 63.75, 63.75, 0.057),
+        0px 9.1px 10px rgba(63.75, 63.75, 63.75, 0.07),
+        0px 15.8px 17.9px rgba(63.75, 63.75, 63.75, 0.083),
+        0px 26.4px 33.4px rgba(63.75, 63.75, 63.75, 0.101),
+        0px 52px 80px rgba(63.75, 63.75, 63.75, 0.14)
+        ;
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }
+        .img-left {
+            display: flex;
+            align-items: center;
+            background-color: #9747FF;
+            padding-inline: .8em;
+            padding-block: 1rem;
+            border-top-left-radius: $border-radius;
+            border-bottom-left-radius: $border-radius;
+            img {
+                max-width: 5em;
+                border-radius: 100%;
+            }
+        }
+        .text-right {
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            margin-inline: 1em;
+            padding-block: .6rem;
+            font-size: .7rem;
+            min-height: 100%;
+            .span-texts {
+                margin-top: auto;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+    &::-webkit-scrollbar {
+        background-color: #fff;
+        width: .8rem;
+    }
+    
+    /* background of the scrollbar except button or resizer */
+    &::-webkit-scrollbar-track {
+        background-color: $dark-background;
+    }
+    
+    /* scrollbar itself */
+    &::-webkit-scrollbar-thumb {
+        background-color: #babac0;
+        border-radius: 16px;
+        border: 4px solid $dark-background;
+    }
+    
+    /* set button(top and bottom of the scrollbar) */
+    &::-webkit-scrollbar-button {
+        display:none;
+    }
+}

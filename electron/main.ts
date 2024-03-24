@@ -36,8 +36,9 @@ function createWindow() {
     },
     height: desiredHeight,
     width: desiredWidth,
-    resizable: false,
   });
+
+  // win.removeMenu();
 
   // Test active push message to Renderer-process.
   win.webContents.on("did-finish-load", () => {

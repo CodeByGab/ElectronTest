@@ -1,24 +1,34 @@
-import "./App.scss";
-import ChacInfo from "./components/ChacInfo";
-import ChacName from "./components/ChacName";
-import SkillsProps from "./components/SkillList";
+import MenuPage from "./pages/MenuPage";
+import SheetPage from "./pages/SheetPage";
+import CreateSheetPage from "./pages/CreateSheetPage";
 
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <MenuPage />
+  },
+  {
+    path: 'sheets',
+    element: <SheetPage />
+  },
+  {
+    path: 'createSheet',
+    element: <CreateSheetPage />
+  }
+])
 function App() {
+  console.log('app iniciado')
+  // const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // const toggleDarkMode = () => {
+  //   setIsDarkMode(!isDarkMode);
+  // };
+
   return (
-    <div className="app-container">
-      <div className="side-container">
-        <ChacInfo />
-      </div>
-      <div className="main-container">
+    
+    <RouterProvider router={router}/>
 
-        <ChacName characterName = "Nombre Grande"/>
-
-        <SkillsProps FOR={4} AGI={2} INT={1} VIG={5} PRE={3} />
-        
-        <SkillsProps FOR={4} AGI={2} INT={1} VIG={5} PRE={3} />
-
-      </div>
-    </div>
   );
 }
 

@@ -1,0 +1,17 @@
+@import '../../../index.scss';
+
+.chac-info {
+    background-color: $dark-component;
+    margin-inline: $default-margin;
+    margin-top: $default-margin - 6px;
+    padding: $default-padding;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    min-width: calc(40vw - $default-margin);
+    min-height: calc(100vh);
+    img {
+        max-width: 150px;
+    }
+}
