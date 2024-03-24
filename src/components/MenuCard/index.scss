@@ -5,7 +5,7 @@ $border-radius: 14px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-height: calc(100vh - 12rem);
+    max-height: calc(100vh - $footer-hg);
     overflow-y: auto;
     .card {
         margin-block: .5rem;

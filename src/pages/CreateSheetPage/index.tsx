@@ -1,57 +1,66 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import "./index.scss";
 import Attributes from "../../components/CreateSheets/Attributes";
 import Origin from "../../components/CreateSheets/Origin";
+import FooterCS from "../../components/CreateSheets/FooterCS";
+import Classes from "../../components/CreateSheets/Classes";
 
 const CreateSheetPage = () => {
-  const [etapa, setEtapa] = useState<number>(1);
-  const [nivelPersonagem, setNivelPersonagem] = useState<string>("");
-  const [origemPersonagem, setOrigemPersonagem] = useState<string>("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [attributesData, setAttributesData] = useState<InitialData>({
+    level: "5%",
+    forcaValue: 1,
+    agilidadeValue: 1,
+    inteligenciaValue: 1,
+    presencaValue: 1,
+    vigorValue: 1,
+  });
+  // const [sheetData, updateSheetData] = useState({});
 
-  const avancarEtapa = () => {
-    setEtapa(etapa + 1);
+  // const handleSave = () => {
+  //   // Convertendo os dados para JSON e atualizando o estado
+  //   const jsonData = JSON.stringify(sheetData);
+  //   updateSheetData(jsonData);
+  // };
+
+  interface InitialData {
+    level: string;
+    forcaValue: number;
+    agilidadeValue: number;
+    inteligenciaValue: number;
+    presencaValue: number;
+    vigorValue: number;
+  }
+
+  const updateAttributesData = (data: InitialData) => {
+    setAttributesData(data);
   };
-
-  const voltarEtapa = () => {
-    setEtapa(etapa - 1);
-  };
-
+  
   return (
     <>
-    <div>
-      {etapa === 1 && (
+      {currentIndex === 0 && (
         <Attributes
-          nivelPersonagem={nivelPersonagem}
-          setNivelPersonagem={setNivelPersonagem}
-          avancarEtapa={avancarEtapa}
+          onUpdateAttributes={updateAttributesData}
+          initialData={attributesData}
         />
       )}
-      {etapa === 2 && (
-        <Origin 
-          origemPersonagem={origemPersonagem}
-          setOrigemPersonagem={setOrigemPersonagem}
-          avancarEtapa={avancarEtapa}
-          voltarEtapa={voltarEtapa}/>
-      )}
-    </div>
-      <footer className="footer-create-sheet">
-        <Link to={"/"} style={{ color: "inherit", textDecoration: "none" }} className="going-back">
-          <button>
-              voltar
-          </button>
-        </Link>
-        <Link to={'/'} style={{ color: "inherit", textDecoration: "none"}} className="create-sheet-fast">
-          <button >
-            Criar ficha rápida
-          </button>
-        </Link>
-        <Link to={'/'} style={{ color: "inherit", textDecoration: "none" }} className="going-back">
-          <button>
-            Continuar
-          </button>
-        </Link>
-      </footer>
+
+      {currentIndex === 1 && (<Origin
+          // onUpdateOrigin={updateOriginData}
+          // initialData={originData}
+        />)}
+      {currentIndex === 2 && (<Classes
+          // onUpdateClasses={updateClassesData}
+          // initialData={classesData}
+        />)}
+
+      <FooterCS
+        currentIndex={currentIndex}
+        onBack={() => setCurrentIndex(currentIndex - 1)}
+        onNext={() => {
+          setCurrentIndex(currentIndex + 1);
+        }}
+      />
     </>
   );
 };

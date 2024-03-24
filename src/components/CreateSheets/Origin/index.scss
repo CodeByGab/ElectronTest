@@ -1,0 +1,24 @@
+@import '../../../index.scss';
+
+.att-main {
+    .left-origin {
+        width: 50%;
+        padding-inline: 5rem;
+        padding-block: 8rem;
+        h3 {
+            margin-bottom: 2rem;
+            font-size: 1.4rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            font-size: .9rem;
+            &:nth-child(3) {
+                font-weight: bold;
+            }
+        }
+    }
+    .right-origin {
+        width: 50%;
+        background-color: rgb(68, 68, 112);
+    }
+}

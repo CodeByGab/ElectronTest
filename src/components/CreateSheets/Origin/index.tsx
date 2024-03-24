@@ -1,40 +1,49 @@
-import { ChangeEvent } from "react";
+import "./index.scss";
+import originData from '../../../assets/origens.json';
+import { useState } from "react";
 
-interface OrigemProps {
-  origemPersonagem: string;
-  setOrigemPersonagem: React.Dispatch<React.SetStateAction<string>>;
-  avancarEtapa: () => void;
-  voltarEtapa: () => void;
-}
+const Origin = () => {
 
-const Origin = ({ origemPersonagem, setOrigemPersonagem, avancarEtapa, voltarEtapa }: OrigemProps) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [selectedOption, setSelectedOption] = useState<string>();
 
-  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    setOrigemPersonagem(e.target.value);
-  };
-
-  const handleAvancar = () => {
-    // Validação ou lógica adicional antes de avançar para a próxima etapa
-    avancarEtapa();
-  };
-
-  const handleVoltar = () => {
-    voltarEtapa();
-  };
+  const toogleDropdown = () => {
+    setIsOpen(!isOpen);
+  }
 
   return (
-    <>
-    <h2>Selecione a origem do personagem:</h2>
-      <select value={origemPersonagem} onChange={handleChange}>
-        <option value="origem1">Origem 1</option>
-        <option value="origem2">Origem 2</option>
-        <option value="origem3">Origem 3</option>
-        {/* Outras opções de origens */}
-      </select>
-      <button onClick={handleVoltar}>Voltar</button>
-      <button onClick={handleAvancar}>Avançar</button>
-    </>
-  )
-}
+    <main className="att-main">
+      <div className="left-origin">
+        <h3>Agora, hora de escolher a origem do seu personagem!</h3>
+        <p>
+          O que seu personagem fazia antes de se envolver com o paranormal? A
+          origem representa como a vida pregressa influencia sua carreira de
+          investigador. Escolha uma origem que se encaixe com o conceito de seu
+          personagem.
+        </p>
+        <p>
+          Ao escolher uma origem, você recebe duas perícias treinadas e um poder
+          da origem.
+        </p>
+      </div>
+      <div className="right-origin">
+        <div className="dropdown-origin">
+          <button onClick={toogleDropdown} className="dropdown-toggle-origin">
+            {selectedOption}
+          </button>
+          {isOpen && (
+            <ul className="dropdown-menu-origin">
+              {originData.map((option, index) => (
+                <li key={index}>
+                  {option.nome}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </main>
+  );
+};
 
 export default Origin;

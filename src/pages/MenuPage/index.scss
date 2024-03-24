@@ -1,10 +1,4 @@
 @import '../../index.scss';
-$blue-button: #3498DB;
-$blue-button-hover: #57a7dd;
-$blue-button-active: #1a4d6e;
-$trans-button-font-hover: #0073c0;
-$trans-button-bg-hover: #9bbed6;
-$trans-button-bg-active: #365162;
 
 .header-menu {
     height: 4rem;
@@ -23,7 +17,7 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    min-height: 8rem;
+    height: $footer-hg;
     justify-content: center;
     background-color: $dark-background;
     align-items: center;

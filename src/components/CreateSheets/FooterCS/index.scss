@@ -1,48 +1,59 @@
 @import '../../../index.scss';
 
 .footer-create-sheet {
-    background-color: rgb(68, 63, 63);
+    padding-inline: $padding-menu;
+    justify-content: space-between;
     .going-back {
-        margin-inline: .6rem;
+        display: flex;
+        align-items: center;
         margin-block: 2rem;
         max-height: 3rem;
+        min-width: 8rem;
+        font-size: 1rem;
         border-radius: 12px;
-        button {
-            font-size: 1.2rem;
-            border-radius: 12px;
-            padding-inline: 1.2rem;
-            padding-block: .8rem;
-            cursor: pointer;
-            border: none;
-            background-color: $button-bg-color;
-            color: $text-dark-color;
-            &:hover {
-                background-color: $button-bg-color-hover;
+        padding-block: .8rem;
+        cursor: pointer;
+        border: none;
+        background-color: $button-bg-color;
+        color: $text-dark-color;
+        &:hover {
+            background-color: $button-bg-color-hover;
+        }
+        &:active {
+            background-color: $button-bg-color-active;
+        }
+        span {
+            padding-inline: 1rem;
+        }
+        svg {
+            width: 1.2em;
+            &.svg-left {
+                margin-left: .4rem;
             }
-            &:active {
-                background-color: $button-bg-color-active;
+            &.svg-right {
+                margin-right: .4rem;
+                transform: rotate(180deg);
             }
         }
     }
     .create-sheet-fast {
-        margin-inline: .6rem;
+        border-radius: 12px;
         margin-block: 2rem;
         button {
+            height: 3rem;
             font-size: 1.2rem;
             border-radius: 12px;
             padding-inline: 1.2rem;
-            padding-block: .8rem;
             cursor: pointer;
-            border: 1px solid $blue-button;
-            color: $blue-button;
+            border: 1px solid $button-bg-color-hover;
+            color: $text-dark-color;
             background-color: transparent;
             &:hover {
-                border-color: $trans-button-font-hover  ;
-                background-color: $trans-button-bg-hover;
-                color: $trans-button-font-hover;
+                background-color: $button-bg-color;
+                color: $text-dark-color;
             }
             &:active {
-                background-color: $trans-button-bg-active;
+                background-color: $button-bg-color-active;
                 border: 1px solid white;
             }
         }

@@ -6,11 +6,25 @@ $default-padding: 10px;
 $button-bg-color: #702c6c;
 $button-bg-color-hover: #882c84;
 $button-bg-color-active: #50244c;
+$padding-menu: 6rem;
+$footer-hg: 6rem;
 
 :root {
-  font-family: "Varela", sans-serif;
+  font-family: "Inter", sans-serif;
   color: rgba(255, 255, 255, 0.87);
   background-color: $dark-background;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
 }
 
 * {
